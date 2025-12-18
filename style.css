@@ -58,6 +58,10 @@ body {
   padding-inline: 2rem;
 }
 
+.flex {
+  display: flex !important;
+}
+
 header {
   padding-block-start: 2.75rem;
   display: flex;
@@ -75,7 +79,6 @@ main {
 }
 
 main section,
-.want-draw,
 .want-draw section,
 .fields,
 .form-control,
@@ -110,7 +113,7 @@ main section h1 {
 
 .drawed {
   grid-area: form;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -133,6 +136,7 @@ main section h1 {
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .drawed-numbers span {
@@ -147,10 +151,11 @@ main section h1 {
 }
 
 .want-draw {
+  display: none;
+  flex-direction: column;
   gap: 2.5rem;
   margin-block-start: 2.5rem;
   grid-area: form;
-  display: none;
 }
 
 .want-draw section {
@@ -368,7 +373,8 @@ main section h1 {
     font: var(--display-lg);
   }
 
-  .want-draw {
+  .want-draw,
+  .drawed {
     align-self: center;
     margin-block-start: 0;
   }
